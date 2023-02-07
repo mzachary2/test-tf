@@ -9,6 +9,11 @@ variable "objectVar" {
   description = "test object"
 }
 
+variable "setVar" {
+  type        = set(string)
+  description = "test set"
+}
+
 # Collecting Data Collector ID (used primarily for vRA Cloud)
 data "vra_data_collector" "dc" {
   count                         = var.datacollector != "" ? 1 : 0
