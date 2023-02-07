@@ -5,7 +5,7 @@ provider vra {
 }
 
 variable "objectVar" {
-  type        = map
+  type        = map(string)
   description = "test object"
 }
 
