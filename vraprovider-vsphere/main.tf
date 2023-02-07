@@ -4,6 +4,11 @@ provider vra {
   insecure                      = true
 }
 
+variable "objectVar" {
+  type        = map
+  description = "test object"
+}
+
 # Collecting Data Collector ID (used primarily for vRA Cloud)
 data "vra_data_collector" "dc" {
   count                         = var.datacollector != "" ? 1 : 0
